@@ -1,4 +1,8 @@
+<div align="center">
+ <img src="images/logo.png" width="250"> 
+</div>
 
+Compute word embedding similarity using "aligned" representations. 
 
 ## Idea
 
