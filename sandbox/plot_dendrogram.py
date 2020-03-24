@@ -6,7 +6,7 @@ Research questions:
 from sklearn.decomposition import PCA
 
 from preppy import PartitionedPrep
-from preppy.utils import load_docs
+from preppy.docs import load_docs
 
 from aligned.figs import plot_heatmap
 from aligned.utils import to_corr_mat, cluster, load_pos_words
@@ -21,6 +21,12 @@ PART_IDS = [0, 1]  # this is useful because clustering of second corr_mat is bas
 corpus_path = config.Dirs.corpora / f'{CORPUS_NAME}.txt'
 train_docs, test_docs = load_docs(corpus_path)
 prep = PartitionedPrep(train_docs,
+                       reverse=False,
+                       num_types=None,
+                       num_parts=1,
+                       num_iterations=(1, 1),
+                       batch_size=1,
+                       context_size=7,
                        )
 
 
