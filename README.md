@@ -1,8 +1,9 @@
 <div align="center">
  <img src="logo.png" width="200"> 
+ Grounding RNN word embeddings in the real world
 </div>
 
-Grounding RNN word embeddings in the real world
+
 
 ### Background
 
