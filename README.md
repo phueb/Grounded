@@ -2,17 +2,14 @@
  <img src="images/logo.png" width="200"> 
 </div>
 
-Compute word embedding similarity using "aligned" representations. 
+Grounding RNN word embeddings in the real world
 
 ### Background
 
-#### Word similarity
+#### The grounding problem in language acquisition
 
-Traditionally, similarity between word embeddings is computed with respect to the origin of the word embedding space. 
-This is good enough for most applications, but when comparing similarity across part-of-speech categories in a model trained on sequential statistics of language,
- this causes performance issues. 
- Embeddings, in such a model, will be clustered by part-of-speech and distances between part-of-speech clusters may not be informative.
+A vanilla RNN trained to predict the next word in a corpus of natural language, learnsuseful relationships between words, but it does not know what the words "mean". For example, it does not know that the word "dog" is an object, as opposed to an action or attribute.
 
 #### Proposal
 
-To overcome this limitation, I propose to compute similarity with respect to a new origin - not the origin of the model's embedding space. 
+To overcome this limitation, I propose to supplement an RNN with a grounded reasoning system.
